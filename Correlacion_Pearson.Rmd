@@ -1,0 +1,21 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv("covid-19_general_MX.csv")
+df.corr(method="pearson")
+df.corr()
+plt.matshow(df.corr())
+
+plt.subplots(figsize=(15,7))
+plt.plot(df["EDAD"],df["FECHA_DEF"],"bo")
+plt.ylabel("Sexo")
+plt.xlabel("Edad")
+plt.show()
+```
+
